@@ -3,11 +3,13 @@ import React, { useState, useEffect } from "react";
 import { ContactForm } from "../../components/contactForm/ContactForm";
 import { TileList } from "../../components/tileList/TileList";
 
-export const ContactsPage = () => {
+export const ContactsPage = ({ contacts, addDataToContacts }) => { // <=props by destructuring
   /*
   Define state variables for 
   contact info and duplicate check
   */
+
+  const [contact, setContact] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
