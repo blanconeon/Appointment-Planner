@@ -52,11 +52,13 @@ if (isduplicate === false) {
   return (
     <div>
       <section>
-        <h2>Add Contact</h2> 
+        <h2>Add Contact</h2>
+        <ContactForm name={name} setName={setName} email={email} setEmail={setEmail} phone={phone} setPhone={setPhone} handleSubmit={handleSubmit} isDuplicate={isduplicate}  /> 
       </section>
       <hr />
       <section>
         <h2>Contacts</h2>
+        <TileList contacts={contacts}/>
       </section>
     </div>
   );
