@@ -1,9 +1,14 @@
 import React from "react";
 
-export const Tile = () => {
-  return (
+
+export const Tile = (props) => {
+     return (
     <div className="tile-container">
-      
+     <p className="tile-title">{props.name}</p> 
+     {Object.values(props.description).map((value, index) => {
+      return <p key={index} className="tile">{value}</p>
+    })
+    }
     </div>
-  );
-};
+    );
+    };
